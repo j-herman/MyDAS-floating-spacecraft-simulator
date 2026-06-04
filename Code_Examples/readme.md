@@ -21,6 +21,8 @@ In your terminal, now logged into the Pi, run the following commands:
 
 ```python3 gui.py```
 
+Open the gui in your web browser by copying in the address you see in the terminal.
+
 ```python3 hdd_spin``` 
 
 ## Running your controller
