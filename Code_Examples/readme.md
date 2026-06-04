@@ -23,14 +23,28 @@ In your terminal, now logged into the Pi, run the following commands:
 
 Open the gui in your web browser by copying in the address you see in the terminal.
 
-```python3 hdd_spin``` 
-
 ## Running your controller
-Replace "IP" below with the full IP address that you found above, and the "your_file" parameters with the filepath and filename you'd like to move to/from.
-Add your code to the class_ex.py while loop, give it a new filename, then upload it to the Pi:
 
-```scp -r ~/your_file_on_your_computer echebi@IP/your_file_on_pi```
+Replace "IP" below with the full IP address that you found above, and the "your_file" parameters with the filepath and filename you'd like to move to/from.
+
+Add your code to the class_ex.py while loop, give it a new filename, then upload it to the Pi.  From a new terminal on your laptop (not logged in to Pi):
+
+```scp ~/your_file_on_your_computer echebi@IP:/your_file_on_pi```
 
 If you have saved data to a file on the Pi, you can get it back to your laptop via:
 
-```scp echebi@IP/your_file_on_pi ~/your_file_on_your_computer```
+```scp echebi@IP:/your_file_on_pi ~/your_file_on_your_computer```
+
+Open a new terminal and ssh into the Pi.  Run your file, replacing class_ex.py with the filepath and name you used above:
+
+```python3 class_ex```
+
+## Troubleshooting
+
+If your code isn't working you can try spinning up the hard drive via a simpler program.  In a new terminall, ssh into the Pi and run:
+
+```python3 hdd_spin``` 
+
+To reboot the Pi:
+
+```sudo reboot```
